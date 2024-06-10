@@ -1,54 +1,28 @@
-# codigo que solicita un numero y te dice que digito es numero primo y cual no
+# codigo que cuenta las letras de una palabra
+#include<iostream>
+using namespace std;
 
-bool par(int num) {
-    return num % 2 == 0;
-}
-
-bool primo(int num) {
-    if (num<= 1)
-        return false;
-
-    int sis= sqrt(num);
-    for (int a= 2; a<=sis; a++) {
-        if (num%a == 0)
-            return false;
-    }
-    return true;
-}
-
-void esprimo_espar(int num) {
-    while (num != 0) {
-        int digito = num % 10;
-        cout<<digito<<" ";
-                
-        if (par(digito)) {
-            cout << "es par";
-        } else {
-            cout << "es impar";
-        }
-
-        if (primo(digito)) {
-            cout << " y es primo." << endl;
-        } else {
-            cout << " y no es primo." << endl;
-        }
-cout<<"............................."<<endl;     
-        num=num/10; 
-    }
-}
-
-int main() {
-	int num;
-	do{
-    cout << "Ingrese un numero: ";
-    cin >> num;
-
-    if (num<= 0) {
-        cout << "El numero debe ser mayor a cero." <<endl;
-    }
-}while(num<=0);
+int main()
+{
+      string apellido;
+    int posicion;
     
-    esprimo_espar(num);
+    do {
+        cout<<"Da una cadena: ";
+        cin>>apellido;
+        if(apellido.length()>15) {
+            cout<<"No tiene que ser mayor a 15 caracteres"<<endl;
+        }
+    } while(apellido. length()>15);
+    cout<<"Tu cadena por caracter es: "<<endl;
+    posicion=apellido.length();
+    for(int a=0; a<=posicion-1; a++){
+    cout<<apellido[a]<<"    ";
+    }
+    cout<<endl;
+    for(int i=0; i<=posicion-1; i++){
+    cout<<i<<"    ";
+    } 
     
     return 0;
 }
