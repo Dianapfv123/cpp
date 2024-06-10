@@ -1,5 +1,6 @@
 # codigo que solicita un numero y te dice que digito es numero primo y cual no
 
+
 #include <iostream>
 #include <cmath>
 using namespace std;
